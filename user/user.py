@@ -1,7 +1,6 @@
 class User:
-    balance = 0
     def __init__(self):
-        pass
+        self.balance = 0
 
     def deposit(self, amount):
         self.balance += amount
@@ -34,3 +33,4 @@ kathy.deposit(500).transfer_balance(jerry, 300)
 kathy.transfer_balance(jerry, 300)
 
 jerry.display_balance()
+kathy.display_balance()
