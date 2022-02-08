@@ -1,5 +1,7 @@
-class MathDojo:
+import unittest
 
+
+class MathDojo:
     def __init__(self):
         self.result = 0
 
@@ -15,10 +17,21 @@ class MathDojo:
         for x in nums:
             self.result -= x
         return self
-    	
 
-md = MathDojo()
 
-x = md.add(2).add(2,5,1).subtract(3,2).result
-print(x)
+
+class mathDojoTests(unittest.TestCase):
+    def testOne(self):
+        md = MathDojo()
+        self.assertEqual(md.add(5).subtract(2).result, 3)
+
+    def testTwo(self):
+        md = MathDojo()
+        self.assertEqual(md.add(5).result, 5)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+
 
